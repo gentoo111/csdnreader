@@ -93,7 +93,7 @@ export default {
   },
   methods: {
     doPostCsdnTopNIncrement() {
-      this.$http.post('http://localhost:8888/doPostCsdnTopNIncrement', {
+      this.$http.post('/doPostCsdnTopNIncrement', {
         'name': 'aa'
       }).then(response=>{
         let result = response.data;

@@ -29,7 +29,7 @@ export default {
   },
   methods: {
     createData () {
-      this.$http.post('http://localhost:8888/DigitalFlop', {
+      this.$http.post('/DigitalFlop', {
       }).then(response=>{
         this.digitalFlopData = [
           {

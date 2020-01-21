@@ -152,7 +152,7 @@ export default {
   },
   methods: {
     doPostCsdnTop20() {
-      this.$http.post('http://localhost:8888/doPostCsdnTop20', {
+      this.$http.post('/doPostCsdnTop20', {
         'name': 'aa'
       }).then(response=>{
         let result = response.data;

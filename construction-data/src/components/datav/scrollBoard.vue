@@ -28,7 +28,7 @@
     },
     methods: {
       getScrollBoard() {
-        this.$http.post('http://localhost:8888/getScrollBoard', {}).then(response => {
+        this.$http.post('/getScrollBoard', {}).then(response => {
           this.config = {
             header: ['编号', '博主', '升降', '总票数', '最新统计时间'],
             data: response.data,

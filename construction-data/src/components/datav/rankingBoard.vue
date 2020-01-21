@@ -22,7 +22,7 @@
     },
     methods: {
       getRankingBoard() {
-        this.$http.post('http://localhost:8888/getRankingBoard', {
+        this.$http.post('/getRankingBoard', {
           'name': 'aa'
         }).then(response=>{
           this.config = { data: response.data ,rowNum:22}
