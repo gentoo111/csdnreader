@@ -18,7 +18,7 @@ public class ReaderApplication {
         SpringApplication.run(ReaderApplication.class, args);
     }
 
-    @Bean
+    /*@Bean
     public WebMvcConfigurer corsConfigurer() {
         return new WebMvcConfigurer() {
             @Override
@@ -26,5 +26,5 @@ public class ReaderApplication {
                 registry.addMapping("/**");
             }
         };
-    }
+    }*/
 }
