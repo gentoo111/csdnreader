@@ -4,11 +4,11 @@ module.exports = {
     port: 8081, // 端口
     proxy: {
       '/': {
-        // 目标 API 地址
+        // 后端API地址
         target: 'http://localhost:8888/',
-        // 如果要代理 websockets
-        ws: false,
-        // 将主机标头的原点更改为目标URL
+        // 代理 websockets
+        ws: true,
+        // 跨域
         changeOrigin: true
       }
     }
