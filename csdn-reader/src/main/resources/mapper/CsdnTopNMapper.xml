@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.csdn.reader.dao.CsdnTopNMapper">
+    <resultMap id="BaseResultMap" type="com.csdn.reader.entity.CsdnTopN">
+        <!--
+          WARNING - @mbg.generated
+        -->
+        <id column="id" jdbcType="DECIMAL" property="id"/>
+        <result column="ranking" jdbcType="VARCHAR" property="ranking"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="nowVotes" jdbcType="VARCHAR" property="nowVotes"/>
+        <result column="createDate" jdbcType="TIMESTAMP" property="createDate"/>
+    </resultMap>
+    <select id="getDailyIncrRankingBoard" resultType="java.util.Map">
+        SELECT
+            t.name name,t.nowVotes value
+        FROM
+            ( SELECT * FROM `t_csdn_topn` WHERE DATEDIFF( now( ), createDate ) = #{day} ORDER BY id DESC LIMIT 201 ) t
+        ORDER BY
+            t.id
+    </select>
+
+    <select id="getScrollBoard" resultType="java.util.Map">
+        SELECT
+            t.ranking,t.name,t.nowVotes,t.createDate
+        FROM
+            ( SELECT * FROM `t_csdn_topn` WHERE DATEDIFF( now( ), createDate ) = #{day} ORDER BY id DESC LIMIT 201 ) t
+        ORDER BY
+            t.id
+    </select>
+
+</mapper>
