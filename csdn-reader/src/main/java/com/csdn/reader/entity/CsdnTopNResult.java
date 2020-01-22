@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * @author 爱尔眼科 szz
+ * @author szz
  * @since 2020/1/20 16:45
  */
 public class CsdnTopNResult {
