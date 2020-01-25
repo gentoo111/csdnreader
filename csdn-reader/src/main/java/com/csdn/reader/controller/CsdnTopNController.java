@@ -56,7 +56,7 @@ public class CsdnTopNController {
         return csdnTopNService.doPostCsdnTopNIncrement();
     }
 
-    //增量
+    //趋势
     @PostMapping("doPostCsdnTop20")
     @ResponseBody
     public Object doPostCsdnTop20() throws Exception{

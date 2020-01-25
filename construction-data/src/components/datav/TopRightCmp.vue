@@ -82,7 +82,7 @@ export default {
             data: [
               2.5, 3.5, 6.5, 6.5, 7.5, 6.5, 2.5
             ],
-            type: 'bar',
+            type: 'line',
             barStyle: {
               fill: 'rgba(0, 186, 255, 0.4)'
             }
